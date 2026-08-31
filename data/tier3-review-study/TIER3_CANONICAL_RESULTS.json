@@ -1,0 +1,124 @@
+{
+  "cohort": "tier3_review_study",
+  "n_reviews": 20,
+  "n_cases": 10,
+  "n_reviewers": 2,
+  "domains": [
+    "healthcare",
+    "retail",
+    "student_admission"
+  ],
+  "analysis_design_departures": [
+    "The operational runbook specified 20 reviews of 10 shared cases by two reviewers and was completed as designed. The frozen analysis protocol documented a broader target of at least 30 reviews by at least three reviewers; broader coverage is future work.",
+    "The frozen analysis protocol specified randomised assignment per reviewer; the operational runbook assigned both reviewers the same cases in the same fixed order.",
+    "The frozen S2 procedure required both coders to score every rationale with pre-resolution agreement; each rationale received one reciprocal cross-code.",
+    "The frozen quality flag required session-start and session-end events; neither event was emitted by the workflow."
+  ],
+  "quality_flags": {
+    "session_events_available": false,
+    "proxy": "page1_submit_ts to page2_submit_ts",
+    "threshold_seconds": 15,
+    "n_below_threshold": 14,
+    "n_total": 20,
+    "median_seconds": 11.4885,
+    "min_seconds": 8.351,
+    "max_seconds": 78.318,
+    "interpretation": "The frozen rule specifies session_end minus session_start, but the workflow emitted neither event. The page-1 to page-2 interval is reported as the closest available proxy; the rule flags but does not exclude records."
+  },
+  "S1": {
+    "status": "available",
+    "n_non_blank": 20,
+    "n_total": 20,
+    "completeness_rate": 1.0,
+    "mean_characters": 329.5
+  },
+  "S2": {
+    "status": "partial",
+    "reason": "The frozen rubric required both coders to score every rationale and pre-resolution agreement before adjudication. Each rationale received one cross-code, so no protocol-conformant resolved score or inter-rater agreement is available.",
+    "n_scored_once": 20,
+    "n_total": 20,
+    "n_scored_by_both": 0,
+    "single_code_mean": 2,
+    "single_code_distribution": {
+      "2": 20
+    }
+  },
+  "S3": {
+    "status": "available",
+    "interpretation": "Pipeline-to-submission latency is dominated by queueing because all review identifiers were dispatched within 2.9 seconds and the first page-1 submission followed about 23 minutes later.",
+    "presentation_dispatch_span_seconds": 2.881,
+    "last_presentation_to_first_page1_seconds": 1409.842,
+    "overall": {
+      "n": 20,
+      "median_seconds": 2098.4795,
+      "mean_seconds": 2087.50635,
+      "min_seconds": 1491.041,
+      "max_seconds": 2589.467
+    },
+    "by_reviewer": {
+      "REV-A": {
+        "n": 10,
+        "median_seconds": 1933.232,
+        "mean_seconds": 1934.7001,
+        "min_seconds": 1491.041,
+        "max_seconds": 2363.808
+      },
+      "REV-B": {
+        "n": 10,
+        "median_seconds": 2289.382,
+        "mean_seconds": 2240.3126,
+        "min_seconds": 1862.445,
+        "max_seconds": 2589.467
+      }
+    }
+  },
+  "S4": {
+    "status": "available",
+    "n_acknowledged": 76,
+    "n_presented": 76,
+    "coverage": 1.0,
+    "required_form_fields": true,
+    "surplus_values_discarded_during_join": 4,
+    "evidence_note": "All four acknowledgement checkboxes were required, so complete submission was instrument-enforced rather than evidence of attention. Values were recovered from retained n8n form execution data and joined to the presented manifest by review_id; surplus fourth values for three-item cases were discarded."
+  },
+  "S5": {
+    "status": "available",
+    "interaction_path_exposed_to_reviewers": false,
+    "interpretation": "Zero records an unexercised server-side interaction path, not a reviewer choice to decline an available interaction control.",
+    "n": 20,
+    "mean_cycles": 0,
+    "max_cycles": 0,
+    "n_zero_cycles": 20
+  },
+  "S6": {
+    "status": "available",
+    "n_revised": 6,
+    "n_no_revision": 14,
+    "n_invalid": 0,
+    "mean_similarity_revised": 0.27974533333333335,
+    "min_similarity_revised": 0.165495,
+    "max_similarity_revised": 0.470494
+  },
+  "S7": {
+    "status": "available",
+    "n_divergent": 0,
+    "n_total": 20,
+    "divergence_rate": 0.0
+  },
+  "S8": {
+    "status": "not_applicable",
+    "reason": "No reviewer action diverged from the AI recommendation."
+  },
+  "S9": {
+    "status": "unavailable",
+    "reason": "All 20 MongoDB inserts produced documents containing the review action and identifiers. A stale Tier 2 node reference then terminated the subsequent final-record step in every page-2 execution. S9 remains Unavailable under the frozen unrecovered-error rule because no execution completed the full decision-recording path.",
+    "observed_in_window_mongo_writes": 20,
+    "n_total": 20,
+    "page2_executions_ending_in_error": 20,
+    "protocol_eligible_executions": 0,
+    "protocol_eligible_successful_writes": 0,
+    "mongo_documents_with_review_action": 20,
+    "mongo_documents_with_ai_recommendation": 0,
+    "mongo_documents_with_rationale": 0
+  }
+}

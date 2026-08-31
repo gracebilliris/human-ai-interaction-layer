@@ -1,0 +1,153 @@
+{
+  "total_feedback": 74,
+  "total_evaluations": 110,
+  "joinable_feedback_records": 39,
+  "via_evaluation_id_substring": 32,
+  "via_revision_id_embedded_mongoid": 7,
+  "agreement_same_decision": 3,
+  "divergence_differing_decision": 36,
+  "unknown_or_incomplete": 0,
+  "join_sample": [
+    {
+      "fb_id": "6a23c42716f0bfec2ece5cf4",
+      "rev_id": "rev-6a23c41a16f0bfec2ece5cf3-001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a23c61e16f0bfec2ece5d0e",
+      "rev_id": "rev_20231027_001_missing_context",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "defer"
+    },
+    {
+      "fb_id": "6a23c65a16f0bfec2ece5d18",
+      "rev_id": "rev_6a23c64e16f0bfec2ece5d17_01",
+      "how": "revision_id-embeds-mongoid",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a25173516f0bfec2ece5d42",
+      "rev_id": "rev-eval-SIM_S1_FailedCoordination_01-1-1",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "defer"
+    },
+    {
+      "fb_id": "6a25176f16f0bfec2ece5d4e",
+      "rev_id": "rev_SIM_S1_FailedCoordination_01_001_001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2517ab16f0bfec2ece5d51",
+      "rev_id": "rev_SIM_S1_FailedCoordination_01_20240730_1",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a26442a16f0bfec2ece5d59",
+      "rev_id": "REV_SIM_S1_FailedCoordination_01_01",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a26585416f0bfec2ece5d68",
+      "rev_id": "rev-893d3b7e-0c1a-4d9e-b2b9-e4d6a5c1f0e4-001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2864e716f0bfec2ece7bd4",
+      "rev_id": "rev_6a2864d916f0bfec2ece7bcf_001",
+      "how": "revision_id-embeds-mongoid",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a28676e16f0bfec2ece7c70",
+      "rev_id": "rev_SIM_S1_FailedCoordination_01_01",
+      "how": "evaluation_id-substring",
+      "eval_dec": "approve",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a290d1d16f0bfec2ecea3be",
+      "rev_id": "rev-telemetry-001-sims1-001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2bc36716f0bfec2ecef93d",
+      "rev_id": "rev_6a2bc28916f0bfec2ecef782_001",
+      "how": "revision_id-embeds-mongoid",
+      "eval_dec": "approve",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2d225f01f17cba483a2852",
+      "rev_id": "rev_eval_SIM1_001_v1",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2d229e01f17cba483a28bd",
+      "rev_id": "rev-a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2d240d01f17cba483a2bce",
+      "rev_id": "rev-SIM1-001-v1",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2d8df601f17cba483b44cf",
+      "rev_id": "rev-SIM1-telemetry-001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2db7cb01f17cba483bb33e",
+      "rev_id": "rev-6a2db7c001f17cba483bb314-v1",
+      "how": "evaluation_id-substring",
+      "eval_dec": "approve",
+      "rev_dec": "defer"
+    },
+    {
+      "fb_id": "6a2e81a701f17cba483c8392",
+      "rev_id": "rev-6a2e6ef101f17cba483c82b0-1",
+      "how": "revision_id-embeds-mongoid",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2e81e101f17cba483c8481",
+      "rev_id": "rev_SIM1_MAP_20231027_001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    },
+    {
+      "fb_id": "6a2e821101f17cba483c8546",
+      "rev_id": "rev-SIM1-001",
+      "how": "evaluation_id-substring",
+      "eval_dec": "reject",
+      "rev_dec": "approve"
+    }
+  ],
+  "notes": "Corpus-scope retrospective join between Atlas hail_evaluation and feedback (revision) collections. NOT the six HIL execution cohort. Does not lift signals for the six-execution report; supports S7 at corpus scope only."
+}

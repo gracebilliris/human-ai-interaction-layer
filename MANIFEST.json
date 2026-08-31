@@ -1,0 +1,255 @@
+{
+  "title": "Human-AI Interaction Layer Research Artefact",
+  "paper": "Integrating Human Review into Agentic Software Engineering: A Traceability Study of the Human-AI Interaction Layer",
+  "venue": "ACM Transactions on Software Engineering and Methodology",
+  "version": "0.2.0",
+  "repository": "https://github.com/gracebilliris/human-ai-interaction-layer",
+  "license": "MIT",
+  "status": "self-contained reproducible package; analysis scripts execute from included data",
+  "evidence_streams": [
+    {
+      "id": "retrospective",
+      "label": "Retrospective checkpoint operation",
+      "description": "Six documented HAIL executions supporting checkpoint-operation and missing-trace findings",
+      "executions": 6,
+      "diagnostic_check_status": "All nine Unavailable for this cohort",
+      "paper_sections": ["Results: HAIL checkpoint operation", "Results: Retrospective traceability diagnosis"],
+      "artefacts": [
+        {
+          "file": "data/retrospective/hail_evaluation_records.jsonl",
+          "description": "110 Atlas evaluation documents (58 unique evaluation identifiers); contextual corpus, not execution cohort",
+          "status": "included",
+          "supports": ["Record-structure analysis", "Identity-gap diagnosis"]
+        },
+        {
+          "file": "data/retrospective/feedback_records.jsonl",
+          "description": "74 Atlas feedback documents (54 unique revision identifiers); contextual corpus, not execution cohort",
+          "status": "included",
+          "supports": ["Record-structure analysis", "Identity-gap diagnosis"]
+        },
+        {
+          "file": "data/retrospective/analysis_output/corpus_join_report.json",
+          "description": "Heuristic identifier-string and embedded-document-ID matches across corpora",
+          "status": "included",
+          "supports": ["Audit artefact only; not a stable join or diagnostic-check result"]
+        },
+        {
+          "file": "data/retrospective/analysis_output/hail_summary.json",
+          "description": "Legacy derived summary of evaluation records",
+          "status": "included",
+          "supports": ["Audit context; 13/97 labels are not human decisions"]
+        },
+        {
+          "file": "raw form payloads",
+          "status": "excluded",
+          "reason": "Not retained; the cohort is report-defined"
+        },
+        {
+          "file": "selection query and observation window",
+          "status": "excluded",
+          "reason": "Not retained"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-v3",
+      "label": "100-record synthetic instrumentation exercise",
+      "description": "Automated pipeline-engineering stress test with zero human participation",
+      "records": 100,
+      "paper_sections": ["Results: Revised instrumentation results"],
+      "artefacts": [
+        {
+          "file": "data/synthetic-v3/COHORT_PROTOCOL_FROZEN.md",
+          "description": "Frozen protocol for the synthetic v3 stress-test package",
+          "status": "included",
+          "supports": ["Protocol reproducibility"]
+        },
+        {
+          "file": "data/synthetic-v3/AUDIT_SUMMARY.md",
+          "description": "Independent audit report with hash verification",
+          "status": "included",
+          "supports": ["Package integrity"]
+        },
+        {
+          "file": "enriched synthetic records",
+          "status": "excluded",
+          "reason": "Safe by content (all synthetic) but the parent directory contains workflow exports and execution snapshots with local filesystem paths"
+        }
+      ]
+    },
+    {
+      "id": "tier3-review-study",
+      "label": "20-review study (two reviewers, 10 shared cases)",
+      "description": "Bounded human-submitted diagnostic-check evidence under disclosed departures from the broader frozen analysis design",
+      "reviews": 20,
+      "reviewers": 2,
+      "cases": 10,
+      "diagnostic_checks": {
+        "S1": "Available", "S2": "Partial", "S3": "Available",
+        "S4": "Available", "S5": "Available", "S6": "Available",
+        "S7": "Available", "S8": "Not applicable", "S9": "Unavailable"
+      },
+      "paper_sections": ["Results: Review-study findings"],
+      "artefacts": [
+        {
+          "file": "data/tier3-review-study/TIER3_CANONICAL_RESULTS.json",
+          "description": "Canonical analysis results governing all manuscript claims",
+          "status": "included",
+          "supports": ["S1-S9 status verification"]
+        },
+        {
+          "file": "data/tier3-review-study/cases_tier3.json",
+          "description": "Case definitions for the review study",
+          "status": "included",
+          "supports": ["Study design reproducibility"]
+        },
+        {
+          "file": "data/tier3-review-study/sprint_dispatch_log.jsonl",
+          "description": "Sanitised dispatch log (form URLs removed); maps review_id to reviewer pseudonym",
+          "status": "included",
+          "supports": ["Reviewer assignment verification"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_present.jsonl",
+          "description": "Sanitised presentation events (form URLs removed, reviewer_from_session resolved to pseudonyms)",
+          "status": "included",
+          "supports": ["S1, S3, S4, S5, S6, S7 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_page1.jsonl",
+          "description": "Sanitised page-1 submission events (form URLs removed, reviewer codes resolved)",
+          "status": "included",
+          "supports": ["S1, S2, S3 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_page2.jsonl",
+          "description": "Sanitised page-2 submission events (form URLs removed, reviewer codes resolved)",
+          "status": "included",
+          "supports": ["S3, S6, S7 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_interaction.jsonl",
+          "description": "Interaction events (empty: no interactions occurred)",
+          "status": "included",
+          "supports": ["S5 zero-cycle verification"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_mongo_records.jsonl",
+          "description": "Sanitised MongoDB decision-store records (connection details removed, reviewer codes resolved)",
+          "status": "included",
+          "supports": ["S9 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/raw_runtime/tier3_execution_audit.json",
+          "description": "Execution audit with acknowledgement joins and error status",
+          "status": "included",
+          "supports": ["S4, S5, S9 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/s2_coding/rev_a_codes.csv",
+          "description": "REV-A cross-coding of REV-B rationales",
+          "status": "included",
+          "supports": ["S2 computation"]
+        },
+        {
+          "file": "data/tier3-review-study/s2_coding/rev_b_codes.csv",
+          "description": "REV-B cross-coding of REV-A rationales",
+          "status": "included",
+          "supports": ["S2 computation"]
+        },
+        {
+          "file": "scripts/analyse_tier3_canonical.py",
+          "description": "Canonical analysis script (reads from data/tier3-review-study/)",
+          "status": "included",
+          "supports": ["Computational reproducibility"]
+        },
+        {
+          "file": "scripts/frozen_analysis/s6_preproc.py",
+          "description": "Frozen S6 similarity computation module (v1.0.0, 5-character shingles)",
+          "status": "included",
+          "supports": ["S6 reproducibility"]
+        },
+        {
+          "file": "raw runtime data (n8n execution DB, MongoDB snapshots)",
+          "status": "excluded",
+          "reason": "Contains session-derived reviewer handles and infrastructure metadata; sanitised extracts are included above"
+        }
+      ]
+    },
+    {
+      "id": "tier2-walkthrough",
+      "label": "20-case author-operated walkthrough",
+      "description": "Supplementary instrumentation and execution-recovery exercise; not fresh reviewer-behaviour evidence",
+      "cases": 20,
+      "participants": "One participant (pseudonym: PARTICIPANT-01)",
+      "diagnostic_checks": {
+        "S1": "Available", "S2": "Partial", "S3": "Unavailable",
+        "S4": "Available", "S5": "Unavailable", "S6": "Partial",
+        "S7": "Available", "S8": "Not applicable", "S9": "Unavailable"
+      },
+      "paper_sections": ["Supplementary walkthrough evidence"],
+      "artefacts": [
+        {
+          "file": "data/tier2-walkthrough/TIER2_CANONICAL_RESULTS.json",
+          "description": "Canonical analysis results",
+          "status": "included",
+          "supports": ["S1-S9 status verification for walkthrough"]
+        },
+        {
+          "file": "data/tier2-walkthrough/tier2_enriched_records.jsonl",
+          "description": "Sanitised enriched records (ethics reference removed, participant pseudonymised, filesystem paths redacted, author identity removed)",
+          "status": "included",
+          "supports": ["S1-S9 computation for walkthrough"]
+        },
+        {
+          "file": "scripts/analyse_tier2_canonical.py",
+          "description": "Canonical analysis script (reads from data/tier2-walkthrough/)",
+          "status": "included",
+          "supports": ["Computational reproducibility"]
+        }
+      ]
+    }
+  ],
+  "excluded_material": [
+    {
+      "item": "prospective_cohort_2026-08-30 (30 August harness)",
+      "reason": "All executions ended in error; S9 does not verify persistence; files retain identifying metadata; seeded synthetic content"
+    },
+    {
+      "item": "atlas_backup/",
+      "reason": "Contains absolute local paths, unsanitised provenance metadata, and cloud-service identifiers"
+    },
+    {
+      "item": "Manuscript governance records (EVIDENCE_LEDGER.md, REVIEWER_RISK_REGISTER.md, etc.)",
+      "reason": "Contain confidential author/reviewer/institutional metadata; safe public-facing content is derived into protocols/ and data/*/SCOPE.md"
+    },
+    {
+      "item": "73-record offline artefact (hil_review_records.jsonl)",
+      "reason": "Provenance states n8n workflow did not activate; records written outside running pipeline; excluded from manuscript results"
+    },
+    {
+      "item": "Exploratory aggregations (corpus_remeasurement.json, hil_signal_remeasurement.json)",
+      "reason": "Proxy calculations that do not implement predeclared diagnostic checks; explicitly quarantined"
+    },
+    {
+      "item": "Related submission details",
+      "reason": "Belongs in confidential editor disclosure only"
+    },
+    {
+      "item": "Synthetic v3 enriched records and workflow exports",
+      "reason": "Safe by content but parent directory contains local filesystem paths in node configurations"
+    }
+  ],
+  "inclusion_checklist": [
+    {
+      "item": "Licence selection",
+      "action": "Released under the MIT License",
+      "blocking": false
+    },
+    {
+      "item": "Persistent DOI",
+      "action": "Deposit in Zenodo, Figshare, or institutional repository after acceptance",
+      "blocking": false
+    }
+  ]
+}

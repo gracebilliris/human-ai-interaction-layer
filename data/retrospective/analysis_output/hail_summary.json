@@ -1,0 +1,15 @@
+{
+  "agent_proposal_counts": {
+    "unknown::unknown": 110
+  },
+  "approve_reject_counts": {
+    "approve": 13,
+    "reject": 97
+  },
+  "candidate_submission_identifier_fields": {},
+  "timestamp_span": {
+    "end": "2026-06-16T16:14:03Z",
+    "start": "2026-06-05T07:01:53Z"
+  },
+  "total_records": 110
+}

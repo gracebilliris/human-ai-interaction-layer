@@ -1,0 +1,52 @@
+{
+  "analysis_status": "canonical manuscript-admissible walkthrough analysis",
+  "n_records": 20,
+  "n_unique_review_ids": 20,
+  "page2_first_to_last_seconds": 806.82,
+  "S1": {
+    "status": "Available",
+    "substantive_rationale_fields": 20
+  },
+  "S2": {
+    "status": "Partial",
+    "reason": "No protocol-conformant result without two independent coders and pre-resolution agreement."
+  },
+  "S3": {
+    "status": "Unavailable",
+    "reason": "Pipeline presentation timestamps are absent."
+  },
+  "S4": {
+    "status": "Available",
+    "acknowledged_required_fields": 75,
+    "interpretation": "Instrument-enforced field completion, not attention."
+  },
+  "S5": {
+    "status": "Unavailable",
+    "reason": "Page submissions are not request-response cycles."
+  },
+  "S6": {
+    "status": "Partial",
+    "eligible_revision_fields": 18,
+    "ineligible_instruction_fields": 2,
+    "exploratory_eligible_only_five_shingle_cosine": {
+      "n": 18,
+      "mean": 0.3988984649906515,
+      "median": 0.3578469907065036,
+      "minimum": 0.10410398118573058,
+      "maximum": 0.705475203309085
+    },
+    "manuscript_rule": "Do not report a protocol-conformant 20-pair result."
+  },
+  "S7": {
+    "status": "Available",
+    "concordant_fixture_action_pairs": 20
+  },
+  "S8": {
+    "status": "Not applicable",
+    "eligible_divergences": 0
+  },
+  "S9": {
+    "status": "Unavailable",
+    "reason": "Only post-hoc recovery writes are retained."
+  }
+}

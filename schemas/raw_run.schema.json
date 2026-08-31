@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "failures": {
+      "items": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "failure_mode": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "failure_mode"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "prototype_version": {
+      "type": "string"
+    },
+    "records": {
+      "items": {
+        "properties": {
+          "agent_proposal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "approve_reject_label": {
+            "enum": [
+              "approve",
+              "reject",
+              "revise",
+              null
+            ],
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "execution_id": {
+            "type": "string"
+          },
+          "form_output": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "persistence_query_result": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "propagation_check_result": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "reviewer_decision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "revision_id": {
+            "type": "string"
+          },
+          "submission_id": {
+            "type": "string"
+          },
+          "timestamp_iso8601": {
+            "format": "date-time",
+            "type": "string"
+          }
+        },
+        "required": [
+          "submission_id",
+          "agent_proposal",
+          "reviewer_decision",
+          "approve_reject_label",
+          "timestamp_iso8601",
+          "execution_id",
+          "form_output",
+          "revision_id",
+          "persistence_query_result",
+          "propagation_check_result"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "timestamp_iso8601": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "venue_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "venue_id",
+    "timestamp_iso8601",
+    "prototype_version",
+    "seed",
+    "records",
+    "failures"
+  ],
+  "title": "TOSEM HAIL post-submission revision raw run schema",
+  "type": "object"
+}

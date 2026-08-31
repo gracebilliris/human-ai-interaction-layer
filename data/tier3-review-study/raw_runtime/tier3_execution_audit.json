@@ -1,0 +1,790 @@
+{
+  "review_count": 20,
+  "present_event_count": 20,
+  "page1_event_count": 20,
+  "page2_event_count": 20,
+  "interaction_event_count": 0,
+  "mongo_record_count": 20,
+  "records": [
+    {
+      "review_id": "t3-REV-A-hc-t3-04-224123",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1277",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1297",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1298",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-hc-t3-10-befa73",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1278",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1300",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1301",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-hc-t3-05-87717c",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1279",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1303",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1304",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-hc-t3-09-437516",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1280",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1306",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1307",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-rt-t3-02-34376a",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1281",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1312",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1313",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-rt-t3-08-e6bc54",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1282",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1318",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1319",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-rt-t3-07-f0c3ee",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1283",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1324",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1325",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-sa-t3-02-67df03",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1284",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1330",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1331",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-sa-t3-06-cba73d",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1285",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1336",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1337",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-A-sa-t3-09-81926b",
+      "reviewer_code": "REV-A",
+      "executions": [
+        {
+          "execution_id": "1286",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1342",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1343",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-hc-t3-04-946ab5",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1287",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1309",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1310",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-hc-t3-10-ca96bb",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1288",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1315",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1316",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-hc-t3-05-ca4a71",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1289",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1321",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1322",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-hc-t3-09-9a2609",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1290",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1327",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1328",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-rt-t3-02-fae73f",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1291",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1333",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1334",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-rt-t3-08-e0d3ba",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1292",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1339",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1340",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-rt-t3-07-a0ccc4",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1293",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1345",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1346",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-sa-t3-02-f6bab2",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1294",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1348",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1349",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-sa-t3-06-5861c4",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1295",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1351",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1352",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    },
+    {
+      "review_id": "t3-REV-B-sa-t3-09-484db8",
+      "reviewer_code": "REV-B",
+      "executions": [
+        {
+          "execution_id": "1296",
+          "status": "success",
+          "kind": "present"
+        },
+        {
+          "execution_id": "1354",
+          "status": "success",
+          "kind": "page1"
+        },
+        {
+          "execution_id": "1355",
+          "status": "error",
+          "kind": "page2"
+        }
+      ],
+      "page1_acknowledgements": {
+        "ack_item_1_seen": [
+          "I acknowledge surfaced item 1"
+        ],
+        "ack_item_2_seen": [
+          "I acknowledge surfaced item 2"
+        ],
+        "ack_item_3_seen": [
+          "I acknowledge surfaced item 3"
+        ],
+        "ack_item_4_seen": [
+          "I acknowledge surfaced item 4"
+        ]
+      },
+      "mongo_insert_status": "success",
+      "final_record_status": "error",
+      "page2_execution_status": "error",
+      "interaction_execution_count": 0
+    }
+  ]
+}
