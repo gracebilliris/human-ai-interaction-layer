@@ -89,6 +89,6 @@ work.
 - `reviewer_from_session` literal values in page-1, page-2, and MongoDB
   records resolved to correct pseudonyms (REV-A, REV-B) from dispatch log.
 - MongoDB `decision_store` connection details replaced with type-only stub.
-- Obsolete internal tier labels in review, scenario, item, configuration, and
+- Obsolete internal cohort labels in review, scenario, item, configuration, and
   schema identifiers replaced with neutral review-study labels; joins and
   identifier uniqueness were preserved.
