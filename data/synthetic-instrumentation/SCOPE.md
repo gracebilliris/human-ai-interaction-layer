@@ -1,11 +1,9 @@
-# Synthetic v3 evidence scope
+# Synthetic instrumentation evidence scope
 
 ## What is included
 
-- `COHORT_PROTOCOL_FROZEN.md` — Frozen protocol for the 100-record stress-test
-  package.
-- `AUDIT_SUMMARY.md` — Independent audit report confirming 546/546 hash
-  verification, with addendum correcting the initial 581/583 to 583/583.
+- This scope statement records the admissible observations and evidence
+  boundaries for the 100-record synthetic instrumentation exercise.
 
 ## What is excluded
 
@@ -15,8 +13,9 @@
 - **Workflow export files** — Contain n8n node configurations with local paths.
 - **Execution data snapshots** — May contain infrastructure identifiers.
 - **MongoDB decision-store dump** — Contains docker-local connection metadata.
-- **Bugged harvester script** — Retained for audit trail but hash conflict
-  noted in VERSION_MANIFEST.md.
+- **Operational protocol, audit report, and package history** — Contain local
+  paths and implementation labels that are not needed to interpret the
+  manuscript's bounded instrumentation findings.
 
 ## Evidence boundaries
 

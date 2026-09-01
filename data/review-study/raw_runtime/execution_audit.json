@@ -7,7 +7,7 @@
   "mongo_record_count": 20,
   "records": [
     {
-      "review_id": "t3-REV-A-hc-t3-04-224123",
+      "review_id": "REV-A-hc-04-224123",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -46,7 +46,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-hc-t3-10-befa73",
+      "review_id": "REV-A-hc-10-befa73",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -85,7 +85,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-hc-t3-05-87717c",
+      "review_id": "REV-A-hc-05-87717c",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -124,7 +124,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-hc-t3-09-437516",
+      "review_id": "REV-A-hc-09-437516",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -163,7 +163,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-rt-t3-02-34376a",
+      "review_id": "REV-A-rt-02-34376a",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -202,7 +202,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-rt-t3-08-e6bc54",
+      "review_id": "REV-A-rt-08-e6bc54",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -241,7 +241,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-rt-t3-07-f0c3ee",
+      "review_id": "REV-A-rt-07-f0c3ee",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -280,7 +280,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-sa-t3-02-67df03",
+      "review_id": "REV-A-sa-02-67df03",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -319,7 +319,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-sa-t3-06-cba73d",
+      "review_id": "REV-A-sa-06-cba73d",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -358,7 +358,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-A-sa-t3-09-81926b",
+      "review_id": "REV-A-sa-09-81926b",
       "reviewer_code": "REV-A",
       "executions": [
         {
@@ -397,7 +397,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-hc-t3-04-946ab5",
+      "review_id": "REV-B-hc-04-946ab5",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -436,7 +436,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-hc-t3-10-ca96bb",
+      "review_id": "REV-B-hc-10-ca96bb",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -475,7 +475,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-hc-t3-05-ca4a71",
+      "review_id": "REV-B-hc-05-ca4a71",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -514,7 +514,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-hc-t3-09-9a2609",
+      "review_id": "REV-B-hc-09-9a2609",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -553,7 +553,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-rt-t3-02-fae73f",
+      "review_id": "REV-B-rt-02-fae73f",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -592,7 +592,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-rt-t3-08-e0d3ba",
+      "review_id": "REV-B-rt-08-e0d3ba",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -631,7 +631,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-rt-t3-07-a0ccc4",
+      "review_id": "REV-B-rt-07-a0ccc4",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -670,7 +670,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-sa-t3-02-f6bab2",
+      "review_id": "REV-B-sa-02-f6bab2",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -709,7 +709,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-sa-t3-06-5861c4",
+      "review_id": "REV-B-sa-06-5861c4",
       "reviewer_code": "REV-B",
       "executions": [
         {
@@ -748,7 +748,7 @@
       "interaction_execution_count": 0
     },
     {
-      "review_id": "t3-REV-B-sa-t3-09-484db8",
+      "review_id": "REV-B-sa-09-484db8",
       "reviewer_code": "REV-B",
       "executions": [
         {

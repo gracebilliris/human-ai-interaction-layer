@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Compute the admissible Tier 3 review-study results from retained runtime evidence.
+"""Compute the admissible review study results from retained runtime evidence.
 
 Run from the repository root:
-    python3 scripts/analyse_tier3_canonical.py
+    python3 scripts/analyse_review_study.py
 
-Reads sanitised Tier 3 data from data/tier3-review-study/ and recomputes
+Reads sanitised review-study data from data/review-study/ and recomputes
 S1–S9 diagnostic-check statuses. Output is compared to the included
-TIER3_CANONICAL_RESULTS.json.
+REVIEW_STUDY_RESULTS.json.
 """
 
 from __future__ import annotations
@@ -27,9 +27,9 @@ if str(SCRIPT_DIR) not in sys.path:
 from frozen_analysis.s6_preproc import compute_s6
 
 REPO = SCRIPT_DIR.parent
-DATA = REPO / "data" / "tier3-review-study"
+DATA = REPO / "data" / "review-study"
 RAW = DATA / "raw_runtime"
-OUT = DATA / "TIER3_CANONICAL_RESULTS.json"
+OUT = DATA / "REVIEW_STUDY_RESULTS.json"
 
 
 def jsonl(path: Path) -> list[dict]:
@@ -55,13 +55,13 @@ def load_scores(path: Path) -> dict[str, int]:
 
 def main() -> None:
     dispatch = jsonl(DATA / "sprint_dispatch_log.jsonl")
-    present = {r["review_id"]: r for r in jsonl(RAW / "tier3_present.jsonl")}
-    page1 = {r["review_id"]: r for r in jsonl(RAW / "tier3_page1.jsonl")}
-    page2 = {r["review_id"]: r for r in jsonl(RAW / "tier3_page2.jsonl")}
-    interactions = jsonl(RAW / "tier3_interaction.jsonl")
-    mongo = {r["review_id"]: r for r in jsonl(RAW / "tier3_mongo_records.jsonl")}
+    present = {r["review_id"]: r for r in jsonl(RAW / "presentation_events.jsonl")}
+    page1 = {r["review_id"]: r for r in jsonl(RAW / "page1_submissions.jsonl")}
+    page2 = {r["review_id"]: r for r in jsonl(RAW / "page2_submissions.jsonl")}
+    interactions = jsonl(RAW / "interaction_events.jsonl")
+    mongo = {r["review_id"]: r for r in jsonl(RAW / "decision_store_records.jsonl")}
     execution_audit = json.loads(
-        (RAW / "tier3_execution_audit.json").read_text()
+        (RAW / "execution_audit.json").read_text()
     )
     audit = {r["review_id"]: r for r in execution_audit["records"]}
     ids = [r["review_id"] for r in dispatch]
@@ -305,7 +305,7 @@ def main() -> None:
         "status": "unavailable",
         "reason": (
             "All 20 MongoDB inserts produced documents containing the review "
-            "action and identifiers. A stale Tier 2 node reference then "
+            "action and identifiers. A stale upstream node reference then "
             "terminated the subsequent final-record step in every page-2 "
             "execution. S9 remains Unavailable under the frozen "
             "unrecovered-error rule because no execution completed the full "
@@ -331,15 +331,15 @@ def main() -> None:
     }
 
     result = {
-        "cohort": "tier3_review_study",
+        "cohort": "review_study",
         "n_reviews": len(ids),
-        "n_cases": len({r["case_id"] for r in dispatch}),
+        "n_scenarios": len({r["scenario_id"] for r in dispatch}),
         "n_reviewers": len(set(reviewer.values())),
         "domains": sorted({r["domain"] for r in dispatch}),
         "analysis_design_departures": [
             (
                 "The operational runbook specified 20 reviews of 10 shared "
-                "cases by two reviewers and was completed as designed. The "
+                "scenarios by two reviewers and was completed as designed. The "
                 "frozen analysis protocol documented a broader target of at "
                 "least 30 reviews by at least three reviewers; broader "
                 "coverage is future work."
@@ -347,7 +347,7 @@ def main() -> None:
             (
                 "The frozen analysis protocol specified randomised assignment "
                 "per reviewer; the operational runbook assigned both reviewers "
-                "the same cases in the same fixed order."
+                "the same scenarios in the same fixed order."
             ),
             (
                 "The frozen S2 procedure required both coders to score every "

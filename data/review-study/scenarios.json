@@ -1,380 +1,380 @@
 [
   {
-    "case_id": "HC-T3-01",
+    "scenario_id": "HC-01",
     "domain": "healthcare",
     "pre_revision_text": "A discharge summary proposes emailing the follow-up plan to a shared family address.\nThe plan includes patient name, clinic, appointment time, and reason for visit.\nThe workflow marks the reminder low risk because the address is already used for billing.\nThe reviewer must decide whether this communication pattern is acceptable for the retained HAIL artefact.",
     "surfaced_items": [
-      {"item_id": "HC-T3-01-I01", "item_type": "privacy_control", "content": "Uses a shared family email address for visit-specific information"},
-      {"item_id": "HC-T3-01-I02", "item_type": "data_minimisation", "content": "Includes reason for visit in an outbound reminder"},
-      {"item_id": "HC-T3-01-I03", "item_type": "auditability", "content": "Retains review_id and communication channel in the audit record"}
+      {"item_id": "HC-01-I01", "item_type": "privacy_control", "content": "Uses a shared family email address for visit-specific information"},
+      {"item_id": "HC-01-I02", "item_type": "data_minimisation", "content": "Includes reason for visit in an outbound reminder"},
+      {"item_id": "HC-01-I03", "item_type": "auditability", "content": "Retains review_id and communication channel in the audit record"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "The proposal exposes visit details through a channel that may not be appropriate for clinical information."
   },
   {
-    "case_id": "HC-T3-02",
+    "scenario_id": "HC-02",
     "domain": "healthcare",
-    "pre_revision_text": "A lab-results review queue stores the AI summary separately from the pathology report.\nThe HAIL record retains case_id, review_id, result category, and the final human action.\nDirect identifiers are replaced with a salted HMAC reference before storage.\nAccess is limited to the treating team and privacy officer role.",
+    "pre_revision_text": "A lab-results review queue stores the AI summary separately from the pathology report.\nThe HAIL record retains scenario_id, review_id, result category, and the final human action.\nDirect identifiers are replaced with a salted HMAC reference before storage.\nAccess is limited to the treating team and privacy officer role.",
     "surfaced_items": [
-      {"item_id": "HC-T3-02-I01", "item_type": "privacy_control", "content": "Salted HMAC reference replaces direct patient identifiers"},
-      {"item_id": "HC-T3-02-I02", "item_type": "access_control", "content": "Access limited to treating team and privacy officer"},
-      {"item_id": "HC-T3-02-I03", "item_type": "traceability", "content": "Review_id links the human action to the retained artefact"},
-      {"item_id": "HC-T3-02-I04", "item_type": "data_minimisation", "content": "Pathology report body is not duplicated in the HAIL record"}
+      {"item_id": "HC-02-I01", "item_type": "privacy_control", "content": "Salted HMAC reference replaces direct patient identifiers"},
+      {"item_id": "HC-02-I02", "item_type": "access_control", "content": "Access limited to treating team and privacy officer"},
+      {"item_id": "HC-02-I03", "item_type": "traceability", "content": "Review_id links the human action to the retained artefact"},
+      {"item_id": "HC-02-I04", "item_type": "data_minimisation", "content": "Pathology report body is not duplicated in the HAIL record"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The record preserves traceability while avoiding duplicate PHI storage and limiting access."
   },
   {
-    "case_id": "HC-T3-03",
+    "scenario_id": "HC-03",
     "domain": "healthcare",
     "pre_revision_text": "A triage-note assistant suggests retaining full chat transcripts for quality review.\nTranscripts include symptoms, names of family members, and location details.\nThe proposal says transcripts will be searchable by support staff for six months.\nThe reviewer evaluates whether the retention plan is proportionate.",
     "surfaced_items": [
-      {"item_id": "HC-T3-03-I01", "item_type": "data_minimisation", "content": "Retains full transcripts including third-party names"},
-      {"item_id": "HC-T3-03-I02", "item_type": "retention_control", "content": "Six-month retention window for searchable content"},
-      {"item_id": "HC-T3-03-I03", "item_type": "access_control", "content": "Broad support-staff access to sensitive content"},
-      {"item_id": "HC-T3-03-I04", "item_type": "purpose_limitation", "content": "Quality review purpose is not tightly scoped"}
+      {"item_id": "HC-03-I01", "item_type": "data_minimisation", "content": "Retains full transcripts including third-party names"},
+      {"item_id": "HC-03-I02", "item_type": "retention_control", "content": "Six-month retention window for searchable content"},
+      {"item_id": "HC-03-I03", "item_type": "access_control", "content": "Broad support-staff access to sensitive content"},
+      {"item_id": "HC-03-I04", "item_type": "purpose_limitation", "content": "Quality review purpose is not tightly scoped"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "The retention plan appears broader than the stated quality-review purpose requires."
   },
   {
-    "case_id": "HC-T3-04",
+    "scenario_id": "HC-04",
     "domain": "healthcare",
     "pre_revision_text": "A medication-refill workflow logs each AI recommendation, human action, and reviewer identity to an append-only store.\nOnly the medication class and dose window are retained; specific drug names are hashed.\nThe reviewer confirms that the HAIL audit trail meets accountability requirements without exposing sensitive drug details.",
     "surfaced_items": [
-      {"item_id": "HC-T3-04-I01", "item_type": "auditability", "content": "Append-only log of AI recommendation and human action"},
-      {"item_id": "HC-T3-04-I02", "item_type": "data_minimisation", "content": "Drug names hashed; only class retained"},
-      {"item_id": "HC-T3-04-I03", "item_type": "traceability", "content": "Reviewer identity linked to review_id"}
+      {"item_id": "HC-04-I01", "item_type": "auditability", "content": "Append-only log of AI recommendation and human action"},
+      {"item_id": "HC-04-I02", "item_type": "data_minimisation", "content": "Drug names hashed; only class retained"},
+      {"item_id": "HC-04-I03", "item_type": "traceability", "content": "Reviewer identity linked to review_id"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The audit trail is complete for accountability without over-retaining clinical detail."
   },
   {
-    "case_id": "HC-T3-05",
+    "scenario_id": "HC-05",
     "domain": "healthcare",
     "pre_revision_text": "An imaging-triage assistant proposes forwarding low-priority MRI cases to an offshore radiology partner.\nThe proposal does not specify data-transfer safeguards or the legal basis for cross-border processing.\nThe reviewer decides whether the HAIL record can capture accountability for this pathway.",
     "surfaced_items": [
-      {"item_id": "HC-T3-05-I01", "item_type": "cross_border_transfer", "content": "Offshore forwarding without documented safeguards"},
-      {"item_id": "HC-T3-05-I02", "item_type": "legal_basis", "content": "No stated legal basis for cross-border processing"},
-      {"item_id": "HC-T3-05-I03", "item_type": "auditability", "content": "Retained record must trace onward transfer"},
-      {"item_id": "HC-T3-05-I04", "item_type": "purpose_limitation", "content": "Downstream purpose not defined"}
+      {"item_id": "HC-05-I01", "item_type": "cross_border_transfer", "content": "Offshore forwarding without documented safeguards"},
+      {"item_id": "HC-05-I02", "item_type": "legal_basis", "content": "No stated legal basis for cross-border processing"},
+      {"item_id": "HC-05-I03", "item_type": "auditability", "content": "Retained record must trace onward transfer"},
+      {"item_id": "HC-05-I04", "item_type": "purpose_limitation", "content": "Downstream purpose not defined"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Cross-border transfer without documented safeguards cannot be approved as-is."
   },
   {
-    "case_id": "HC-T3-06",
+    "scenario_id": "HC-06",
     "domain": "healthcare",
     "pre_revision_text": "A vaccination-reminder workflow sends SMS messages containing only a generic clinic phone number and an appointment window.\nNo patient name, condition, or address is included.\nThe HAIL record retains review_id, message template id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "HC-T3-06-I01", "item_type": "data_minimisation", "content": "Message contains no direct identifiers"},
-      {"item_id": "HC-T3-06-I02", "item_type": "traceability", "content": "Template id linked to review_id"},
-      {"item_id": "HC-T3-06-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "HC-06-I01", "item_type": "data_minimisation", "content": "Message contains no direct identifiers"},
+      {"item_id": "HC-06-I02", "item_type": "traceability", "content": "Template id linked to review_id"},
+      {"item_id": "HC-06-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "Content is minimised and retained record supports accountability."
   },
   {
-    "case_id": "HC-T3-07",
+    "scenario_id": "HC-07",
     "domain": "healthcare",
     "pre_revision_text": "A hospital analytics team proposes reusing consented research data for a new operational-efficiency dashboard.\nOriginal consent covered clinical outcomes research only.\nThe HAIL record must capture whether the human reviewer sanctioned the secondary use.",
     "surfaced_items": [
-      {"item_id": "HC-T3-07-I01", "item_type": "consent_scope", "content": "Original consent limited to clinical outcomes research"},
-      {"item_id": "HC-T3-07-I02", "item_type": "purpose_limitation", "content": "New purpose materially different from consented purpose"},
-      {"item_id": "HC-T3-07-I03", "item_type": "auditability", "content": "Reviewer decision on secondary use must be traceable"},
-      {"item_id": "HC-T3-07-I04", "item_type": "data_minimisation", "content": "No proposed reduction in variable scope"}
+      {"item_id": "HC-07-I01", "item_type": "consent_scope", "content": "Original consent limited to clinical outcomes research"},
+      {"item_id": "HC-07-I02", "item_type": "purpose_limitation", "content": "New purpose materially different from consented purpose"},
+      {"item_id": "HC-07-I03", "item_type": "auditability", "content": "Reviewer decision on secondary use must be traceable"},
+      {"item_id": "HC-07-I04", "item_type": "data_minimisation", "content": "No proposed reduction in variable scope"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Secondary use exceeds the scope of original consent without re-consent or de-identification."
   },
   {
-    "case_id": "HC-T3-08",
+    "scenario_id": "HC-08",
     "domain": "healthcare",
     "pre_revision_text": "A remote-monitoring platform stores raw heart-rate telemetry alongside the derived risk score.\nOnly the derived score and threshold flag are needed for downstream decisions.\nThe reviewer evaluates whether raw telemetry retention is proportionate.",
     "surfaced_items": [
-      {"item_id": "HC-T3-08-I01", "item_type": "data_minimisation", "content": "Raw telemetry retained beyond stated need"},
-      {"item_id": "HC-T3-08-I02", "item_type": "retention_control", "content": "No retention window defined for raw data"},
-      {"item_id": "HC-T3-08-I03", "item_type": "auditability", "content": "Reviewer decision retained in HAIL record"}
+      {"item_id": "HC-08-I01", "item_type": "data_minimisation", "content": "Raw telemetry retained beyond stated need"},
+      {"item_id": "HC-08-I02", "item_type": "retention_control", "content": "No retention window defined for raw data"},
+      {"item_id": "HC-08-I03", "item_type": "auditability", "content": "Reviewer decision retained in HAIL record"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Raw telemetry is retained without a clear proportional need or retention limit."
   },
   {
-    "case_id": "HC-T3-09",
+    "scenario_id": "HC-09",
     "domain": "healthcare",
     "pre_revision_text": "An after-hours triage service retains only the AI summary category, the reviewer action, and a hashed patient reference in the HAIL record.\nThe full conversation is discarded within 24 hours.\nThe reviewer confirms whether the retention plan is proportionate.",
     "surfaced_items": [
-      {"item_id": "HC-T3-09-I01", "item_type": "data_minimisation", "content": "Only category and hashed reference retained"},
-      {"item_id": "HC-T3-09-I02", "item_type": "retention_control", "content": "Full conversation discarded within 24 hours"},
-      {"item_id": "HC-T3-09-I03", "item_type": "traceability", "content": "Reviewer action retained under review_id"},
-      {"item_id": "HC-T3-09-I04", "item_type": "auditability", "content": "Retention rule embedded in HAIL record"}
+      {"item_id": "HC-09-I01", "item_type": "data_minimisation", "content": "Only category and hashed reference retained"},
+      {"item_id": "HC-09-I02", "item_type": "retention_control", "content": "Full conversation discarded within 24 hours"},
+      {"item_id": "HC-09-I03", "item_type": "traceability", "content": "Reviewer action retained under review_id"},
+      {"item_id": "HC-09-I04", "item_type": "auditability", "content": "Retention rule embedded in HAIL record"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The retention plan meets minimisation and traceability requirements."
   },
   {
-    "case_id": "HC-T3-10",
+    "scenario_id": "HC-10",
     "domain": "healthcare",
     "pre_revision_text": "A mental-health chatbot proposes disclosing high-risk keywords to an external partner for suicide prevention outreach.\nThe workflow does not specify what identifiers accompany the keywords.\nThe reviewer decides whether the HAIL artefact can approve this disclosure.",
     "surfaced_items": [
-      {"item_id": "HC-T3-10-I01", "item_type": "disclosure_control", "content": "External disclosure of high-risk keywords"},
-      {"item_id": "HC-T3-10-I02", "item_type": "data_minimisation", "content": "Identifiers accompanying disclosure unspecified"},
-      {"item_id": "HC-T3-10-I03", "item_type": "legal_basis", "content": "Basis for third-party outreach not stated"},
-      {"item_id": "HC-T3-10-I04", "item_type": "auditability", "content": "Reviewer decision on disclosure retained"}
+      {"item_id": "HC-10-I01", "item_type": "disclosure_control", "content": "External disclosure of high-risk keywords"},
+      {"item_id": "HC-10-I02", "item_type": "data_minimisation", "content": "Identifiers accompanying disclosure unspecified"},
+      {"item_id": "HC-10-I03", "item_type": "legal_basis", "content": "Basis for third-party outreach not stated"},
+      {"item_id": "HC-10-I04", "item_type": "auditability", "content": "Reviewer decision on disclosure retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Disclosure detail is under-specified and cannot be approved without safeguards."
   },
   {
-    "case_id": "RT-T3-01",
+    "scenario_id": "RT-01",
     "domain": "retail",
     "pre_revision_text": "A logistics workflow proposes printing the customer's full address on the outer packaging of a fragrance-sample mailer.\nThe workflow flags the pattern as standard for parcel routing.\nThe reviewer evaluates whether the retained HAIL artefact should approve this pattern.",
     "surfaced_items": [
-      {"item_id": "RT-T3-01-I01", "item_type": "disclosure_control", "content": "Customer address printed on outer packaging"},
-      {"item_id": "RT-T3-01-I02", "item_type": "data_minimisation", "content": "No masking applied to routing label"},
-      {"item_id": "RT-T3-01-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
+      {"item_id": "RT-01-I01", "item_type": "disclosure_control", "content": "Customer address printed on outer packaging"},
+      {"item_id": "RT-01-I02", "item_type": "data_minimisation", "content": "No masking applied to routing label"},
+      {"item_id": "RT-01-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "The routing label exposes the customer address without necessary masking."
   },
   {
-    "case_id": "RT-T3-02",
+    "scenario_id": "RT-02",
     "domain": "retail",
     "pre_revision_text": "An order-status API returns only the parcel state and an ETA when queried with the order token.\nNo names, addresses, or payment details are returned to the caller.\nThe HAIL record retains review_id, endpoint id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "RT-T3-02-I01", "item_type": "data_minimisation", "content": "Response omits identifiers and payment details"},
-      {"item_id": "RT-T3-02-I02", "item_type": "access_control", "content": "Order token required for retrieval"},
-      {"item_id": "RT-T3-02-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "RT-02-I01", "item_type": "data_minimisation", "content": "Response omits identifiers and payment details"},
+      {"item_id": "RT-02-I02", "item_type": "access_control", "content": "Order token required for retrieval"},
+      {"item_id": "RT-02-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The endpoint discloses only what the caller needs and is bounded by a token."
   },
   {
-    "case_id": "RT-T3-03",
+    "scenario_id": "RT-03",
     "domain": "retail",
     "pre_revision_text": "A returns-handling workflow proposes storing the reason-for-return free-text field indefinitely to train a product-quality model.\nThe text often contains customer names and complaint details.\nThe reviewer evaluates the retention and reuse plan.",
     "surfaced_items": [
-      {"item_id": "RT-T3-03-I01", "item_type": "purpose_limitation", "content": "Reuse for a purpose beyond returns handling"},
-      {"item_id": "RT-T3-03-I02", "item_type": "retention_control", "content": "Indefinite retention proposed"},
-      {"item_id": "RT-T3-03-I03", "item_type": "data_minimisation", "content": "Free-text field retains identifiers"},
-      {"item_id": "RT-T3-03-I04", "item_type": "auditability", "content": "Reviewer decision on reuse retained"}
+      {"item_id": "RT-03-I01", "item_type": "purpose_limitation", "content": "Reuse for a purpose beyond returns handling"},
+      {"item_id": "RT-03-I02", "item_type": "retention_control", "content": "Indefinite retention proposed"},
+      {"item_id": "RT-03-I03", "item_type": "data_minimisation", "content": "Free-text field retains identifiers"},
+      {"item_id": "RT-03-I04", "item_type": "auditability", "content": "Reviewer decision on reuse retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Retention and reuse plans exceed the returns-handling purpose."
   },
   {
-    "case_id": "RT-T3-04",
+    "scenario_id": "RT-04",
     "domain": "retail",
     "pre_revision_text": "A loyalty-program pipeline redacts card-number digits (keeping only the last four) before storing them alongside points-balance events.\nThe HAIL record retains review_id, redaction method id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "RT-T3-04-I01", "item_type": "privacy_control", "content": "Card numbers redacted before storage"},
-      {"item_id": "RT-T3-04-I02", "item_type": "traceability", "content": "Redaction method id retained"},
-      {"item_id": "RT-T3-04-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
-      {"item_id": "RT-T3-04-I04", "item_type": "data_minimisation", "content": "Only last-four digits retained"}
+      {"item_id": "RT-04-I01", "item_type": "privacy_control", "content": "Card numbers redacted before storage"},
+      {"item_id": "RT-04-I02", "item_type": "traceability", "content": "Redaction method id retained"},
+      {"item_id": "RT-04-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
+      {"item_id": "RT-04-I04", "item_type": "data_minimisation", "content": "Only last-four digits retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "Redaction is proportionate and retention supports auditability."
   },
   {
-    "case_id": "RT-T3-05",
+    "scenario_id": "RT-05",
     "domain": "retail",
     "pre_revision_text": "A recommender workflow proposes joining browsing telemetry with a third-party marketing dataset without a documented data-sharing agreement.\nThe reviewer evaluates the sharing arrangement.",
     "surfaced_items": [
-      {"item_id": "RT-T3-05-I01", "item_type": "disclosure_control", "content": "Third-party data join without agreement"},
-      {"item_id": "RT-T3-05-I02", "item_type": "legal_basis", "content": "No documented basis for sharing"},
-      {"item_id": "RT-T3-05-I03", "item_type": "purpose_limitation", "content": "Marketing purpose not disclosed at collection"},
-      {"item_id": "RT-T3-05-I04", "item_type": "auditability", "content": "Reviewer decision on sharing retained"}
+      {"item_id": "RT-05-I01", "item_type": "disclosure_control", "content": "Third-party data join without agreement"},
+      {"item_id": "RT-05-I02", "item_type": "legal_basis", "content": "No documented basis for sharing"},
+      {"item_id": "RT-05-I03", "item_type": "purpose_limitation", "content": "Marketing purpose not disclosed at collection"},
+      {"item_id": "RT-05-I04", "item_type": "auditability", "content": "Reviewer decision on sharing retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "The data-sharing arrangement lacks documented basis and disclosure."
   },
   {
-    "case_id": "RT-T3-06",
+    "scenario_id": "RT-06",
     "domain": "retail",
     "pre_revision_text": "An in-store camera analytics system produces only aggregate foot-traffic counts per hour.\nNo images, faces, or device identifiers are retained.\nThe HAIL record retains review_id, aggregation method id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "RT-T3-06-I01", "item_type": "data_minimisation", "content": "Only aggregate counts retained"},
-      {"item_id": "RT-T3-06-I02", "item_type": "privacy_control", "content": "No image or biometric retention"},
-      {"item_id": "RT-T3-06-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
+      {"item_id": "RT-06-I01", "item_type": "data_minimisation", "content": "Only aggregate counts retained"},
+      {"item_id": "RT-06-I02", "item_type": "privacy_control", "content": "No image or biometric retention"},
+      {"item_id": "RT-06-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The pipeline retains only aggregate metrics with no individual data."
   },
   {
-    "case_id": "RT-T3-07",
+    "scenario_id": "RT-07",
     "domain": "retail",
     "pre_revision_text": "A chatbot workflow proposes sending the entire chat history including PII to an external LLM API for every user turn.\nNo redaction or contract with the LLM provider is in place.\nThe reviewer evaluates the disclosure pattern.",
     "surfaced_items": [
-      {"item_id": "RT-T3-07-I01", "item_type": "disclosure_control", "content": "Full chat with PII sent to external LLM"},
-      {"item_id": "RT-T3-07-I02", "item_type": "data_minimisation", "content": "No redaction before external call"},
-      {"item_id": "RT-T3-07-I03", "item_type": "legal_basis", "content": "No processing agreement with LLM provider"},
-      {"item_id": "RT-T3-07-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "RT-07-I01", "item_type": "disclosure_control", "content": "Full chat with PII sent to external LLM"},
+      {"item_id": "RT-07-I02", "item_type": "data_minimisation", "content": "No redaction before external call"},
+      {"item_id": "RT-07-I03", "item_type": "legal_basis", "content": "No processing agreement with LLM provider"},
+      {"item_id": "RT-07-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "External disclosure of PII without safeguards is not acceptable."
   },
   {
-    "case_id": "RT-T3-08",
+    "scenario_id": "RT-08",
     "domain": "retail",
     "pre_revision_text": "A subscription-cancellation flow captures only the categorical reason code and the human agent's final action.\nNo verbatim customer statements are retained.\nThe HAIL record retains review_id, category id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "RT-T3-08-I01", "item_type": "data_minimisation", "content": "Only categorical reason retained"},
-      {"item_id": "RT-T3-08-I02", "item_type": "traceability", "content": "Agent action linked to review_id"},
-      {"item_id": "RT-T3-08-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
-      {"item_id": "RT-T3-08-I04", "item_type": "purpose_limitation", "content": "Retention limited to cancellation analytics"}
+      {"item_id": "RT-08-I01", "item_type": "data_minimisation", "content": "Only categorical reason retained"},
+      {"item_id": "RT-08-I02", "item_type": "traceability", "content": "Agent action linked to review_id"},
+      {"item_id": "RT-08-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
+      {"item_id": "RT-08-I04", "item_type": "purpose_limitation", "content": "Retention limited to cancellation analytics"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The retained fields are proportionate to the stated purpose."
   },
   {
-    "case_id": "RT-T3-09",
+    "scenario_id": "RT-09",
     "domain": "retail",
     "pre_revision_text": "A price-optimisation workflow proposes joining loyalty-member records with health-store purchase data to infer medical conditions.\nThe reviewer evaluates the inference pattern.",
     "surfaced_items": [
-      {"item_id": "RT-T3-09-I01", "item_type": "sensitive_inference", "content": "Inference of medical conditions from purchases"},
-      {"item_id": "RT-T3-09-I02", "item_type": "purpose_limitation", "content": "Purchase records collected for order fulfilment only"},
-      {"item_id": "RT-T3-09-I03", "item_type": "legal_basis", "content": "No basis for special-category inference"},
-      {"item_id": "RT-T3-09-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "RT-09-I01", "item_type": "sensitive_inference", "content": "Inference of medical conditions from purchases"},
+      {"item_id": "RT-09-I02", "item_type": "purpose_limitation", "content": "Purchase records collected for order fulfilment only"},
+      {"item_id": "RT-09-I03", "item_type": "legal_basis", "content": "No basis for special-category inference"},
+      {"item_id": "RT-09-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Inferring health conditions exceeds the original purpose and lacks a legal basis."
   },
   {
-    "case_id": "RT-T3-10",
+    "scenario_id": "RT-10",
     "domain": "retail",
     "pre_revision_text": "A refund-processing workflow logs the AI-suggested amount, the reviewer's final amount, and the divergence flag to an append-only ledger.\nOnly aggregate merchant category is retained; product-level line items are hashed.\nThe HAIL record retains review_id and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "RT-T3-10-I01", "item_type": "auditability", "content": "Append-only ledger of AI and human amounts"},
-      {"item_id": "RT-T3-10-I02", "item_type": "data_minimisation", "content": "Line items hashed"},
-      {"item_id": "RT-T3-10-I03", "item_type": "traceability", "content": "Divergence flag linked to review_id"},
-      {"item_id": "RT-T3-10-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "RT-10-I01", "item_type": "auditability", "content": "Append-only ledger of AI and human amounts"},
+      {"item_id": "RT-10-I02", "item_type": "data_minimisation", "content": "Line items hashed"},
+      {"item_id": "RT-10-I03", "item_type": "traceability", "content": "Divergence flag linked to review_id"},
+      {"item_id": "RT-10-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The retained ledger supports accountability while minimising line-item exposure."
   },
   {
-    "case_id": "SA-T3-01",
+    "scenario_id": "SA-01",
     "domain": "student_admission",
     "pre_revision_text": "An admissions triage tool proposes emailing conditional offers with the applicant's home address, date of birth, and prior-school name in the visible signature block.\nThe reviewer evaluates the disclosure pattern.",
     "surfaced_items": [
-      {"item_id": "SA-T3-01-I01", "item_type": "data_minimisation", "content": "Signature block exposes direct identifiers"},
-      {"item_id": "SA-T3-01-I02", "item_type": "disclosure_control", "content": "Applicant DOB visible in email footer"},
-      {"item_id": "SA-T3-01-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
+      {"item_id": "SA-01-I01", "item_type": "data_minimisation", "content": "Signature block exposes direct identifiers"},
+      {"item_id": "SA-01-I02", "item_type": "disclosure_control", "content": "Applicant DOB visible in email footer"},
+      {"item_id": "SA-01-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "The signature block exposes identifiers that are not required for the offer."
   },
   {
-    "case_id": "SA-T3-02",
+    "scenario_id": "SA-02",
     "domain": "student_admission",
     "pre_revision_text": "An offer-confirmation email carries only the applicant's given name and a secure portal link.\nAll other applicant details are behind portal authentication.\nThe HAIL record retains review_id, template id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "SA-T3-02-I01", "item_type": "data_minimisation", "content": "Email contains only given name and link"},
-      {"item_id": "SA-T3-02-I02", "item_type": "access_control", "content": "Applicant details gated by portal authentication"},
-      {"item_id": "SA-T3-02-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
-      {"item_id": "SA-T3-02-I04", "item_type": "traceability", "content": "Template id linked to review_id"}
+      {"item_id": "SA-02-I01", "item_type": "data_minimisation", "content": "Email contains only given name and link"},
+      {"item_id": "SA-02-I02", "item_type": "access_control", "content": "Applicant details gated by portal authentication"},
+      {"item_id": "SA-02-I03", "item_type": "auditability", "content": "Reviewer decision retained"},
+      {"item_id": "SA-02-I04", "item_type": "traceability", "content": "Template id linked to review_id"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "Disclosure is minimised and downstream details are properly gated."
   },
   {
-    "case_id": "SA-T3-03",
+    "scenario_id": "SA-03",
     "domain": "student_admission",
     "pre_revision_text": "An admissions analytics team proposes joining applicant records with third-party social-media profiles to build a fit score.\nNo applicant consent to social-media analysis was collected.\nThe reviewer evaluates the pattern.",
     "surfaced_items": [
-      {"item_id": "SA-T3-03-I01", "item_type": "consent_scope", "content": "Social-media analysis outside consent"},
-      {"item_id": "SA-T3-03-I02", "item_type": "purpose_limitation", "content": "Fit score not disclosed at collection"},
-      {"item_id": "SA-T3-03-I03", "item_type": "sensitive_inference", "content": "Behavioural inference from public profiles"},
-      {"item_id": "SA-T3-03-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-03-I01", "item_type": "consent_scope", "content": "Social-media analysis outside consent"},
+      {"item_id": "SA-03-I02", "item_type": "purpose_limitation", "content": "Fit score not disclosed at collection"},
+      {"item_id": "SA-03-I03", "item_type": "sensitive_inference", "content": "Behavioural inference from public profiles"},
+      {"item_id": "SA-03-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Social-media analysis exceeds the consented scope and lacks a legal basis."
   },
   {
-    "case_id": "SA-T3-04",
+    "scenario_id": "SA-04",
     "domain": "student_admission",
     "pre_revision_text": "An interview-scheduling workflow stores only the interview slot, the applicant's given name, and a hashed applicant reference.\nContact details are fetched at send time from the source system and are not duplicated in the HAIL record.\nThe reviewer evaluates the retention pattern.",
     "surfaced_items": [
-      {"item_id": "SA-T3-04-I01", "item_type": "data_minimisation", "content": "Contact details not duplicated"},
-      {"item_id": "SA-T3-04-I02", "item_type": "privacy_control", "content": "Hashed applicant reference used"},
-      {"item_id": "SA-T3-04-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
+      {"item_id": "SA-04-I01", "item_type": "data_minimisation", "content": "Contact details not duplicated"},
+      {"item_id": "SA-04-I02", "item_type": "privacy_control", "content": "Hashed applicant reference used"},
+      {"item_id": "SA-04-I03", "item_type": "auditability", "content": "Reviewer decision retained under review_id"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "Retention is proportionate and identifiers are properly hashed."
   },
   {
-    "case_id": "SA-T3-05",
+    "scenario_id": "SA-05",
     "domain": "student_admission",
     "pre_revision_text": "A ranking assistant proposes weighting applications by postcode to model likelihood of enrolment.\nThe reviewer evaluates whether this indirect proxy is acceptable.",
     "surfaced_items": [
-      {"item_id": "SA-T3-05-I01", "item_type": "sensitive_inference", "content": "Postcode used as proxy for socio-economic status"},
-      {"item_id": "SA-T3-05-I02", "item_type": "discrimination_risk", "content": "Indirect discrimination risk on ranked outcomes"},
-      {"item_id": "SA-T3-05-I03", "item_type": "purpose_limitation", "content": "Postcode collected for correspondence only"},
-      {"item_id": "SA-T3-05-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-05-I01", "item_type": "sensitive_inference", "content": "Postcode used as proxy for socio-economic status"},
+      {"item_id": "SA-05-I02", "item_type": "discrimination_risk", "content": "Indirect discrimination risk on ranked outcomes"},
+      {"item_id": "SA-05-I03", "item_type": "purpose_limitation", "content": "Postcode collected for correspondence only"},
+      {"item_id": "SA-05-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Postcode weighting introduces an indirect discrimination risk that is not justified."
   },
   {
-    "case_id": "SA-T3-06",
+    "scenario_id": "SA-06",
     "domain": "student_admission",
     "pre_revision_text": "A reference-check workflow retains only the referee's name, role, and a categorical outcome (positive/neutral/negative).\nVerbatim referee comments are discarded after 30 days.\nThe HAIL record retains review_id, referee role id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "SA-T3-06-I01", "item_type": "data_minimisation", "content": "Only categorical outcome retained"},
-      {"item_id": "SA-T3-06-I02", "item_type": "retention_control", "content": "Verbatim comments discarded after 30 days"},
-      {"item_id": "SA-T3-06-I03", "item_type": "traceability", "content": "Referee role id linked to review_id"},
-      {"item_id": "SA-T3-06-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-06-I01", "item_type": "data_minimisation", "content": "Only categorical outcome retained"},
+      {"item_id": "SA-06-I02", "item_type": "retention_control", "content": "Verbatim comments discarded after 30 days"},
+      {"item_id": "SA-06-I03", "item_type": "traceability", "content": "Referee role id linked to review_id"},
+      {"item_id": "SA-06-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The referee-check pattern is proportionate and traceable."
   },
   {
-    "case_id": "SA-T3-07",
+    "scenario_id": "SA-07",
     "domain": "student_admission",
     "pre_revision_text": "A widening-participation program proposes storing self-declared disability status alongside the applicant's admission outcome for a five-year longitudinal study.\nNo separate consent for research use has been captured.\nThe reviewer evaluates the pattern.",
     "surfaced_items": [
-      {"item_id": "SA-T3-07-I01", "item_type": "consent_scope", "content": "Research use without separate consent"},
-      {"item_id": "SA-T3-07-I02", "item_type": "special_category", "content": "Disability status retained beyond admissions purpose"},
-      {"item_id": "SA-T3-07-I03", "item_type": "retention_control", "content": "Five-year retention window proposed"},
-      {"item_id": "SA-T3-07-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-07-I01", "item_type": "consent_scope", "content": "Research use without separate consent"},
+      {"item_id": "SA-07-I02", "item_type": "special_category", "content": "Disability status retained beyond admissions purpose"},
+      {"item_id": "SA-07-I03", "item_type": "retention_control", "content": "Five-year retention window proposed"},
+      {"item_id": "SA-07-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Longitudinal research use of special-category data requires separate consent."
   },
   {
-    "case_id": "SA-T3-08",
+    "scenario_id": "SA-08",
     "domain": "student_admission",
     "pre_revision_text": "An application-status portal returns only the current stage (received / under review / decision issued) and the next expected date.\nNo scores, notes, or reviewer identities are exposed to the applicant.\nThe HAIL record retains review_id, endpoint id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "SA-T3-08-I01", "item_type": "data_minimisation", "content": "Only status and date returned"},
-      {"item_id": "SA-T3-08-I02", "item_type": "access_control", "content": "Reviewer identity withheld from applicant view"},
-      {"item_id": "SA-T3-08-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-08-I01", "item_type": "data_minimisation", "content": "Only status and date returned"},
+      {"item_id": "SA-08-I02", "item_type": "access_control", "content": "Reviewer identity withheld from applicant view"},
+      {"item_id": "SA-08-I03", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The status endpoint exposes only what the applicant needs."
   },
   {
-    "case_id": "SA-T3-09",
+    "scenario_id": "SA-09",
     "domain": "student_admission",
     "pre_revision_text": "An admissions workflow proposes retaining unstructured interviewer notes (which may contain observations about ethnicity, religion, or health) indefinitely for future benchmarking.\nThe reviewer evaluates the retention plan.",
     "surfaced_items": [
-      {"item_id": "SA-T3-09-I01", "item_type": "special_category", "content": "Notes may capture special-category data"},
-      {"item_id": "SA-T3-09-I02", "item_type": "retention_control", "content": "Indefinite retention proposed"},
-      {"item_id": "SA-T3-09-I03", "item_type": "purpose_limitation", "content": "Future benchmarking beyond current admissions purpose"},
-      {"item_id": "SA-T3-09-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-09-I01", "item_type": "special_category", "content": "Notes may capture special-category data"},
+      {"item_id": "SA-09-I02", "item_type": "retention_control", "content": "Indefinite retention proposed"},
+      {"item_id": "SA-09-I03", "item_type": "purpose_limitation", "content": "Future benchmarking beyond current admissions purpose"},
+      {"item_id": "SA-09-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Reject",
     "ai_rationale_preview": "Unbounded retention of unstructured notes with special-category risk is not acceptable."
   },
   {
-    "case_id": "SA-T3-10",
+    "scenario_id": "SA-10",
     "domain": "student_admission",
     "pre_revision_text": "An enrolment-confirmation workflow logs the AI-suggested cohort, the human reviewer's cohort decision, and a divergence flag to an append-only ledger.\nOnly cohort id and reviewer decision are retained; applicant score is hashed.\nThe HAIL record retains review_id, cohort id, and reviewer decision.",
     "surfaced_items": [
-      {"item_id": "SA-T3-10-I01", "item_type": "auditability", "content": "Append-only ledger of AI and human cohort choices"},
-      {"item_id": "SA-T3-10-I02", "item_type": "data_minimisation", "content": "Applicant score hashed"},
-      {"item_id": "SA-T3-10-I03", "item_type": "traceability", "content": "Divergence flag linked to review_id"},
-      {"item_id": "SA-T3-10-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
+      {"item_id": "SA-10-I01", "item_type": "auditability", "content": "Append-only ledger of AI and human cohort choices"},
+      {"item_id": "SA-10-I02", "item_type": "data_minimisation", "content": "Applicant score hashed"},
+      {"item_id": "SA-10-I03", "item_type": "traceability", "content": "Divergence flag linked to review_id"},
+      {"item_id": "SA-10-I04", "item_type": "auditability", "content": "Reviewer decision retained"}
     ],
     "ai_recommended_action": "Approve",
     "ai_rationale_preview": "The ledger supports accountability while minimising score exposure."

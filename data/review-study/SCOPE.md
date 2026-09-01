@@ -1,27 +1,27 @@
-# Tier 3 review-study evidence scope
+# Review-study evidence scope
 
 ## What is included
 
-- `TIER3_CANONICAL_RESULTS.json` — Canonical analysis results governing all
+- `REVIEW_STUDY_RESULTS.json` — Canonical analysis results governing all
   manuscript claims for the review study.
-- `cases_tier3.json` — Case definitions for the 10 shared review cases.
+- `scenarios.json` — Definitions for the 10 shared review scenarios.
 - `sprint_dispatch_log.jsonl` — Sanitised dispatch log mapping review_id to
-  reviewer pseudonym, case, domain, and presentation timestamp. Form URLs
+  reviewer pseudonym, scenario, domain, and presentation timestamp. Form URLs
   removed.
-- `raw_runtime/tier3_present.jsonl` — 20 presentation events with case
+- `raw_runtime/presentation_events.jsonl` — 20 presentation events with scenario
   fixtures, pre-revision text, and surfaced items. Form URLs removed;
   `reviewer_from_session` resolved to pseudonyms.
-- `raw_runtime/tier3_page1.jsonl` — 20 page-1 submission events with
+- `raw_runtime/page1_submissions.jsonl` — 20 page-1 submission events with
   rationales. Form URLs removed; reviewer codes resolved.
-- `raw_runtime/tier3_page2.jsonl` — 20 page-2 submission events with actions,
+- `raw_runtime/page2_submissions.jsonl` — 20 page-2 submission events with actions,
   revision text, and similarity inputs. Form URLs removed; reviewer codes
   resolved.
-- `raw_runtime/tier3_interaction.jsonl` — Interaction events (empty file;
+- `raw_runtime/interaction_events.jsonl` — Interaction events (empty file;
   no reviewer interactions occurred).
-- `raw_runtime/tier3_mongo_records.jsonl` — 20 MongoDB decision-store
+- `raw_runtime/decision_store_records.jsonl` — 20 MongoDB decision-store
   candidates with write timestamps and actions. Connection details removed;
   reviewer codes resolved.
-- `raw_runtime/tier3_execution_audit.json` — Execution audit with
+- `raw_runtime/execution_audit.json` — Execution audit with
   acknowledgement joins, error statuses, and interaction counts.
 - `s2_coding/rev_a_codes.csv` — REV-A cross-coding of REV-B rationales.
 - `s2_coding/rev_b_codes.csv` — REV-B cross-coding of REV-A rationales.
@@ -37,7 +37,7 @@
 
 ## Evidence boundaries
 
-The review study contains 20 reviews of 10 shared cases by two reviewers,
+The review study contains 20 reviews of 10 shared scenarios by two reviewers,
 as specified in the operational runbook and completed as designed.
 
 | Check | Status | Key boundary |
@@ -50,11 +50,11 @@ as specified in the operational runbook and completed as designed.
 | S6 | Available | 6/20 submissions contained eligible revision text, mean cosine similarity 0.280; 14 submitted no revision text |
 | S7 | Available | 0/20 divergent actions |
 | S8 | Not applicable | No natural divergence |
-| S9 | Unavailable | All 20 MongoDB inserts produced documents containing review action and identifiers; a stale Tier 2 node reference terminated the subsequent final-record step; frozen unrecovered-error rule excludes these executions |
+| S9 | Unavailable | All 20 MongoDB inserts produced documents containing review action and identifiers; a stale upstream node reference terminated the subsequent final-record step; frozen unrecovered-error rule excludes these executions |
 
 ### Departures from the frozen analysis design
 
-The operational runbook specified and completed 20 reviews of 10 shared cases
+The operational runbook specified and completed 20 reviews of 10 shared scenarios
 by two reviewers. A separate frozen analysis protocol documented the broader
 target of at least 30 reviews by at least three reviewers with randomised
 assignment and overlapping S2 coding. The following items record where the
@@ -64,7 +64,7 @@ work.
 - The frozen analysis protocol targeted at least 30 reviews by at least three
   reviewers; the operational runbook completed 20 reviews by two reviewers.
 - The frozen analysis protocol specified randomised assignment per reviewer;
-  both reviewers received the same cases in the same fixed order.
+  both reviewers received the same scenarios in the same fixed order.
 - The frozen S2 procedure required overlapping independent codes with
   pre-resolution agreement; each rationale received one reciprocal cross-code.
 - Session events for the frozen short-review rule were not emitted; the
@@ -74,7 +74,7 @@ work.
 - All 20 MongoDB inserts produced documents containing the review action and
   identifiers; the presentation timestamp, rationale, and AI recommendation
   were not propagated to those documents.
-- A stale Tier 2 node reference terminated the final-record step in every
+- A stale upstream node reference terminated the final-record step in every
   page-2 execution, producing unrecovered errors after the MongoDB insert.
 - The S4 form made all four acknowledgement fields mandatory; four three-item
   records produced surplus fourth values that were discarded during the join.
@@ -89,3 +89,6 @@ work.
 - `reviewer_from_session` literal values in page-1, page-2, and MongoDB
   records resolved to correct pseudonyms (REV-A, REV-B) from dispatch log.
 - MongoDB `decision_store` connection details replaced with type-only stub.
+- Obsolete internal tier labels in review, scenario, item, configuration, and
+  schema identifiers replaced with neutral review-study labels; joins and
+  identifier uniqueness were preserved.

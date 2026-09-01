@@ -51,23 +51,17 @@
       ]
     },
     {
-      "id": "synthetic-v3",
+      "id": "synthetic-instrumentation",
       "label": "100-record synthetic instrumentation exercise",
       "description": "Automated pipeline-engineering stress test with zero human participation",
       "records": 100,
-      "paper_sections": ["Results: Revised instrumentation results"],
+      "paper_sections": ["Results: Synthetic instrumentation results"],
       "artefacts": [
         {
-          "file": "data/synthetic-v3/COHORT_PROTOCOL_FROZEN.md",
-          "description": "Frozen protocol for the synthetic v3 stress-test package",
+          "file": "data/synthetic-instrumentation/SCOPE.md",
+          "description": "Scope and claim boundaries for the synthetic instrumentation evidence",
           "status": "included",
-          "supports": ["Protocol reproducibility"]
-        },
-        {
-          "file": "data/synthetic-v3/AUDIT_SUMMARY.md",
-          "description": "Independent audit report with hash verification",
-          "status": "included",
-          "supports": ["Package integrity"]
+          "supports": ["Evidence-boundary inspection"]
         },
         {
           "file": "enriched synthetic records",
@@ -77,12 +71,12 @@
       ]
     },
     {
-      "id": "tier3-review-study",
-      "label": "20-review study (two reviewers, 10 shared cases)",
+      "id": "review-study",
+      "label": "20-review study (two reviewers, 10 shared scenarios)",
       "description": "Bounded human-submitted diagnostic-check evidence under disclosed departures from the broader frozen analysis design",
       "reviews": 20,
       "reviewers": 2,
-      "cases": 10,
+      "scenarios": 10,
       "diagnostic_checks": {
         "S1": "Available", "S2": "Partial", "S3": "Available",
         "S4": "Available", "S5": "Available", "S6": "Available",
@@ -91,74 +85,74 @@
       "paper_sections": ["Results: Review-study findings"],
       "artefacts": [
         {
-          "file": "data/tier3-review-study/TIER3_CANONICAL_RESULTS.json",
+          "file": "data/review-study/REVIEW_STUDY_RESULTS.json",
           "description": "Canonical analysis results governing all manuscript claims",
           "status": "included",
           "supports": ["S1-S9 status verification"]
         },
         {
-          "file": "data/tier3-review-study/cases_tier3.json",
-          "description": "Case definitions for the review study",
+          "file": "data/review-study/scenarios.json",
+          "description": "Scenario definitions for the review study",
           "status": "included",
           "supports": ["Study design reproducibility"]
         },
         {
-          "file": "data/tier3-review-study/sprint_dispatch_log.jsonl",
+          "file": "data/review-study/sprint_dispatch_log.jsonl",
           "description": "Sanitised dispatch log (form URLs removed); maps review_id to reviewer pseudonym",
           "status": "included",
           "supports": ["Reviewer assignment verification"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_present.jsonl",
+          "file": "data/review-study/raw_runtime/presentation_events.jsonl",
           "description": "Sanitised presentation events (form URLs removed, reviewer_from_session resolved to pseudonyms)",
           "status": "included",
           "supports": ["S1, S3, S4, S5, S6, S7 computation"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_page1.jsonl",
+          "file": "data/review-study/raw_runtime/page1_submissions.jsonl",
           "description": "Sanitised page-1 submission events (form URLs removed, reviewer codes resolved)",
           "status": "included",
           "supports": ["S1, S2, S3 computation"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_page2.jsonl",
+          "file": "data/review-study/raw_runtime/page2_submissions.jsonl",
           "description": "Sanitised page-2 submission events (form URLs removed, reviewer codes resolved)",
           "status": "included",
           "supports": ["S3, S6, S7 computation"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_interaction.jsonl",
+          "file": "data/review-study/raw_runtime/interaction_events.jsonl",
           "description": "Interaction events (empty: no interactions occurred)",
           "status": "included",
           "supports": ["S5 zero-cycle verification"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_mongo_records.jsonl",
+          "file": "data/review-study/raw_runtime/decision_store_records.jsonl",
           "description": "Sanitised MongoDB decision-store records (connection details removed, reviewer codes resolved)",
           "status": "included",
           "supports": ["S9 computation"]
         },
         {
-          "file": "data/tier3-review-study/raw_runtime/tier3_execution_audit.json",
+          "file": "data/review-study/raw_runtime/execution_audit.json",
           "description": "Execution audit with acknowledgement joins and error status",
           "status": "included",
           "supports": ["S4, S5, S9 computation"]
         },
         {
-          "file": "data/tier3-review-study/s2_coding/rev_a_codes.csv",
+          "file": "data/review-study/s2_coding/rev_a_codes.csv",
           "description": "REV-A cross-coding of REV-B rationales",
           "status": "included",
           "supports": ["S2 computation"]
         },
         {
-          "file": "data/tier3-review-study/s2_coding/rev_b_codes.csv",
+          "file": "data/review-study/s2_coding/rev_b_codes.csv",
           "description": "REV-B cross-coding of REV-A rationales",
           "status": "included",
           "supports": ["S2 computation"]
         },
         {
-          "file": "scripts/analyse_tier3_canonical.py",
-          "description": "Canonical analysis script (reads from data/tier3-review-study/)",
+          "file": "scripts/analyse_review_study.py",
+          "description": "Canonical analysis script (reads from data/review-study/)",
           "status": "included",
           "supports": ["Computational reproducibility"]
         },

@@ -1,7 +1,7 @@
 {
-  "cohort": "tier3_review_study",
+  "cohort": "review_study",
   "n_reviews": 20,
-  "n_cases": 10,
+  "n_scenarios": 10,
   "n_reviewers": 2,
   "domains": [
     "healthcare",
@@ -9,8 +9,8 @@
     "student_admission"
   ],
   "analysis_design_departures": [
-    "The operational runbook specified 20 reviews of 10 shared cases by two reviewers and was completed as designed. The frozen analysis protocol documented a broader target of at least 30 reviews by at least three reviewers; broader coverage is future work.",
-    "The frozen analysis protocol specified randomised assignment per reviewer; the operational runbook assigned both reviewers the same cases in the same fixed order.",
+    "The operational runbook specified 20 reviews of 10 shared scenarios by two reviewers and was completed as designed. The frozen analysis protocol documented a broader target of at least 30 reviews by at least three reviewers; broader coverage is future work.",
+    "The frozen analysis protocol specified randomised assignment per reviewer; the operational runbook assigned both reviewers the same scenarios in the same fixed order.",
     "The frozen S2 procedure required both coders to score every rationale with pre-resolution agreement; each rationale received one reciprocal cross-code.",
     "The frozen quality flag required session-start and session-end events; neither event was emitted by the workflow."
   ],
@@ -111,7 +111,7 @@
   },
   "S9": {
     "status": "unavailable",
-    "reason": "All 20 MongoDB inserts produced documents containing the review action and identifiers. A stale Tier 2 node reference then terminated the subsequent final-record step in every page-2 execution. S9 remains Unavailable under the frozen unrecovered-error rule because no execution completed the full decision-recording path.",
+    "reason": "All 20 MongoDB inserts produced documents containing the review action and identifiers. A stale upstream node reference then terminated the subsequent final-record step in every page-2 execution. S9 remains Unavailable under the frozen unrecovered-error rule because no execution completed the full decision-recording path.",
     "observed_in_window_mongo_writes": 20,
     "n_total": 20,
     "page2_executions_ending_in_error": 20,
