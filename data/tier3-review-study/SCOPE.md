@@ -89,4 +89,3 @@ work.
 - `reviewer_from_session` literal values in page-1, page-2, and MongoDB
   records resolved to correct pseudonyms (REV-A, REV-B) from dispatch log.
 - MongoDB `decision_store` connection details replaced with type-only stub.
-- See `SANITISATION.md` for the complete record.

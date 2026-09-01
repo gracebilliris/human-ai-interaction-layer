@@ -2,7 +2,7 @@
   "title": "Anonymous Artefact Package",
   "paper": "Integrating Human Review into Agentic Software Engineering: A Traceability Study of the Human-AI Interaction Layer",
   "venue": "ACM Transactions on Software Engineering and Methodology",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "license": "MIT",
   "status": "self-contained reproducible package; analysis scripts execute from included data",
   "evidence_streams": [
