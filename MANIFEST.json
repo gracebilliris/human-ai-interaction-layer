@@ -2,7 +2,7 @@
   "title": "Anonymous Artefact Package",
   "paper": "Integrating Human Review into Agentic Software Engineering: A Traceability Study of the Human-AI Interaction Layer",
   "venue": "ACM Transactions on Software Engineering and Methodology",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "license": "MIT",
   "status": "self-contained reproducible package; analysis scripts execute from included data",
   "evidence_streams": [
@@ -174,36 +174,6 @@
           "reason": "Contains session-derived reviewer handles and infrastructure metadata; sanitised extracts are included above"
         }
       ]
-    }
-  ],
-  "excluded_material": [
-    {
-      "item": "prospective_cohort_2026-08-30 (30 August harness)",
-      "reason": "All executions ended in error; S9 does not verify persistence; files retain identifying metadata; seeded synthetic content"
-    },
-    {
-      "item": "atlas_backup/",
-      "reason": "Contains absolute local paths, unsanitised provenance metadata, and cloud-service identifiers"
-    },
-    {
-      "item": "Manuscript governance records (EVIDENCE_LEDGER.md, REVIEWER_RISK_REGISTER.md, etc.)",
-      "reason": "Contain confidential author/reviewer/institutional metadata; safe public-facing content is derived into protocols/ and data/*/SCOPE.md"
-    },
-    {
-      "item": "73-record offline artefact (hil_review_records.jsonl)",
-      "reason": "Provenance states n8n workflow did not activate; records written outside running pipeline; excluded from manuscript results"
-    },
-    {
-      "item": "Exploratory aggregations (corpus_remeasurement.json, hil_signal_remeasurement.json)",
-      "reason": "Proxy calculations that do not implement predeclared diagnostic checks; explicitly quarantined"
-    },
-    {
-      "item": "Related submission details",
-      "reason": "Belongs in confidential editor disclosure only"
-    },
-    {
-      "item": "Synthetic v3 enriched records and workflow exports",
-      "reason": "Safe by content but parent directory contains local filesystem paths in node configurations"
     }
   ],
   "inclusion_checklist": [

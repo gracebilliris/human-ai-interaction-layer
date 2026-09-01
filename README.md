@@ -25,7 +25,6 @@ The package also includes:
 - `scripts/analyse_tier3_canonical.py`: the canonical review-study analysis;
 - `scripts/frozen_analysis/s6_preproc.py`: the frozen S6 computation;
 - `MANIFEST.json`: claim-to-evidence mapping;
-- `SANITISATION.md` and `PROVENANCE.md`: release transformations and provenance;
 - `INTEGRITY.sha256` and `scripts/verify_hashes.sh`: integrity verification.
 
 ## Requirements
