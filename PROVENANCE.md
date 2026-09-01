@@ -2,18 +2,20 @@
 
 ## Provenance
 
-This public artefact repository supports the manuscript describing the
-development and evaluation of the Human–AI Interaction Layer (HAIL) within an
-agentic software engineering prototype.
+This artefact package accompanies a manuscript submitted for anonymous review.
+The evidence was collected and analysed by the authors during the development
+and evaluation of the Human–AI Interaction Layer (HAIL) within an agentic
+software engineering prototype.
 
 All human-submitted evidence was collected under institutional ethics approval.
 Participant consent was recorded. The approval reference and consent records are
-held by the authors and can be provided to the editor on request; they are not
-included in this repository.
+held by the authors and will be provided to the editor on request; they are not
+included in this anonymous package.
 
 ## Licence
 
-The repository is released under the MIT License. See `LICENSE`.
+The code and documentation in this package are released under the MIT License.
+See `LICENSE`.
 
 ## Integrity
 
@@ -29,10 +31,10 @@ since packaging, the verification script will report the discrepancy.
 
 ## Archival status
 
-This version is publicly available at
-`https://github.com/gracebilliris/human-ai-interaction-layer`.
-It has not yet been deposited in a DOI-minting archive and does not have an
-archival DOI.
+This package has **not** been deposited in a persistent repository and does
+**not** have an archival DOI. The authors intend to release a sanitised,
+versioned archive with the final publication. This pre-release version
+accompanies the anonymous manuscript for reviewer inspection only.
 
 ## Data dictionary
 
@@ -78,5 +80,6 @@ Available. It is not an evidence-status category.
 
 ## Citation
 
-Until archival citation metadata is available, cite the repository URL and the
-version recorded in `MANIFEST.json`.
+No citation metadata is provided because this is an anonymous pre-release
+package. Citation information will be added after the anonymous review
+concludes and the authors' identities are disclosed.

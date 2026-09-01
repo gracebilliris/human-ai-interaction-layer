@@ -1,9 +1,8 @@
 {
-  "title": "Human-AI Interaction Layer Research Artefact",
+  "title": "Anonymous Artefact Package",
   "paper": "Integrating Human Review into Agentic Software Engineering: A Traceability Study of the Human-AI Interaction Layer",
   "venue": "ACM Transactions on Software Engineering and Methodology",
   "version": "0.2.0",
-  "repository": "https://github.com/gracebilliris/human-ai-interaction-layer",
   "license": "MIT",
   "status": "self-contained reproducible package; analysis scripts execute from included data",
   "evidence_streams": [
@@ -175,39 +174,6 @@
           "reason": "Contains session-derived reviewer handles and infrastructure metadata; sanitised extracts are included above"
         }
       ]
-    },
-    {
-      "id": "tier2-walkthrough",
-      "label": "20-case author-operated walkthrough",
-      "description": "Supplementary instrumentation and execution-recovery exercise; not fresh reviewer-behaviour evidence",
-      "cases": 20,
-      "participants": "One participant (pseudonym: PARTICIPANT-01)",
-      "diagnostic_checks": {
-        "S1": "Available", "S2": "Partial", "S3": "Unavailable",
-        "S4": "Available", "S5": "Unavailable", "S6": "Partial",
-        "S7": "Available", "S8": "Not applicable", "S9": "Unavailable"
-      },
-      "paper_sections": ["Supplementary walkthrough evidence"],
-      "artefacts": [
-        {
-          "file": "data/tier2-walkthrough/TIER2_CANONICAL_RESULTS.json",
-          "description": "Canonical analysis results",
-          "status": "included",
-          "supports": ["S1-S9 status verification for walkthrough"]
-        },
-        {
-          "file": "data/tier2-walkthrough/tier2_enriched_records.jsonl",
-          "description": "Sanitised enriched records (ethics reference removed, participant pseudonymised, filesystem paths redacted, author identity removed)",
-          "status": "included",
-          "supports": ["S1-S9 computation for walkthrough"]
-        },
-        {
-          "file": "scripts/analyse_tier2_canonical.py",
-          "description": "Canonical analysis script (reads from data/tier2-walkthrough/)",
-          "status": "included",
-          "supports": ["Computational reproducibility"]
-        }
-      ]
     }
   ],
   "excluded_material": [
@@ -241,11 +207,6 @@
     }
   ],
   "inclusion_checklist": [
-    {
-      "item": "Licence selection",
-      "action": "Released under the MIT License",
-      "blocking": false
-    },
     {
       "item": "Persistent DOI",
       "action": "Deposit in Zenodo, Figshare, or institutional repository after acceptance",

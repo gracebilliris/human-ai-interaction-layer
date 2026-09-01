@@ -1,16 +1,15 @@
 # Sanitisation record
 
 This document records every anonymisation and sanitisation transformation
-applied to produce this public, sanitised artefact repository.
+applied to produce this anonymous artefact repository.
 
 ## Principles
 
-1. **Remove identifying study metadata.** Author names and email addresses in
-   study records, institutional affiliations, reviewer identities, ethics
-   reference identifiers, and private infrastructure paths are removed or
-   replaced. Repository ownership and the copyright notice remain public.
+1. **Remove identifying metadata.** Author names, email addresses,
+   institutional affiliations, reviewer identities, ethics reference
+   identifiers, and private infrastructure paths are removed or replaced.
 2. **Preserve analytical identifiers through pseudonyms.** Where an identifier
-   is needed for reproducibility (e.g., to distinguish two reviewers), a
+   is needed for reproducibility (e.g., to distinguish the two reviewers), a
    stable pseudonym is used.
 3. **Do not alter analytical content.** Numeric values, timestamps (except
    where uniquely identifying), diagnostic-check statuses, and field contents
@@ -25,24 +24,15 @@ applied to produce this public, sanitised artefact repository.
 |---|---|---|---|
 | Form URLs | `page1_url`, `page2_url`, `page1_form_url`, `page2_form_url` containing `localhost:5678` endpoints | Removed from all included records | Expose infrastructure configuration |
 | Reviewer session handles | `reviewer_code: "reviewer_from_session"` literal in page-1, page-2, and MongoDB records | Resolved to correct pseudonyms (REV-A, REV-B) using dispatch log mapping | Literal value is a metadata defect; pseudonyms preserve analytical distinction |
+| Legacy evidence-class label | `evidence_class: "prospective_independent_reviewers"` | Retained as source metadata | The historical field name describes the planned evidence class; it does not establish reviewer independence and is not used to characterise the completed study |
 | MongoDB connection details | `decision_store.database`, `decision_store.collection`, `decision_store.target` with docker-local addresses | Replaced with `{"type": "MongoDB", "note": "Connection details removed for anonymisation"}` | Connection strings expose infrastructure |
-
-### Tier 2 walkthrough data
-
-| Category | Original content | Transformation | Rationale |
-|---|---|---|---|
-| Ethics reference | `hrec_ref` (format: XX-YYYY-NNNN) in reviewer block | Removed; replaced with `ethics_note` stating approval is held | Institutional identifier |
-| Participant identity | `reviewer_display_name`, `participant_id: "author_first_person_01"`, `reviewer_code: "AUTHOR-01"` | Replaced with `participant_id: "PARTICIPANT-01"`, `reviewer_code: "PARTICIPANT-01"` | Author identity |
-| HREC metadata | `hrec_status`, `hrec_note` fields in reviewer block | Removed; replaced with generic ethics note | Institutional metadata |
-| Recovery note paths | `/home/node/.n8n/hail_tier2_*.jsonl` in `recovery_note` | Replaced with `[internal-path]` | Filesystem path |
-| Author name in notes | Author's given name in `recovery_note` text | Replaced with "the participant's" | Author identity |
 
 ### Global transformations
 
 | Category | Original content | Transformation | Rationale |
 |---|---|---|---|
 | Author names | Author names and emails in governance records | Not copied; public-facing content derived instead | Governance records contain confidential metadata throughout |
-| Institutional ethics ID | Ethics approval reference (format: XX-YYYY-NNNN) | Removed; stated as "institutional ethics approval is held" | Confidential governance record |
+| Institutional ethics ID | Ethics approval reference (format: XX-YYYY-NNNN) | Removed; stated as "institutional ethics approval is held" | Anonymous review requirement |
 | Reviewer identities | Reviewer names and session-derived handles in raw runtime data | Replaced with stable pseudonyms REV-A and REV-B | Reviewers must remain anonymous; methodology requires distinguishing two participants |
 | Historical form labels | `HAIL-form-tier2-first-person` schema metadata | Retained and disclosed as a metadata defect | Does not change elapsed intervals or review joins |
 | Local filesystem paths | `/Users/*/`, `~/Projects/`, OneDrive paths | Removed from all included files | Identify the author's computing environment |

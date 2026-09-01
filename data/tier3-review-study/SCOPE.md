@@ -43,7 +43,7 @@ as specified in the operational runbook and completed as designed.
 | Check | Status | Key boundary |
 |---|---|---|
 | S1 | Available | 20/20 non-blank rationales; mean 329.5 characters |
-| S2 | Partial | One reciprocal cross-code per rationale; all 20 scored 2; no overlapping independent scores or resolved score |
+| S2 | Partial | One reciprocal cross-code per rationale; all 20 scored 2; no overlapping separately assigned scores or resolved score |
 | S3 | Available | Median 2,098.5 seconds overall; reviewer medians 1,933.2 and 2,289.4 seconds; pipeline-to-submission time dominated by batch queueing |
 | S4 | Available | 76/76 required acknowledgement fields joined to surfaced items; instrument-enforced completion, not attention |
 | S5 | Available | Mean and maximum 0 cycles on an interaction path not exposed to reviewers |
