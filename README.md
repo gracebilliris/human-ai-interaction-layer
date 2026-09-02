@@ -1,6 +1,6 @@
 # HAIL artefact
 
-This anonymous package contains the minimum evidence and analysis code needed
+This public package contains the minimum evidence and analysis code needed
 to inspect the three evidence streams reported in the HAIL paper and reproduce
 the 20-review study results. It contains no author names, affiliations,
 reviewer identities, ethics identifiers, credentials, or private

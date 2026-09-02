@@ -1,4 +1,4 @@
-# Anonymous artefact repository .gitignore
+# HAIL artefact repository .gitignore
 
 # Python
 __pycache__/

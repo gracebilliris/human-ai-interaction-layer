@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # verify_hashes.sh — Verify integrity of all released artefact files
-# Run from the anonymous-artefact/ directory.
+# Run from the artefact repository root.
 set -euo pipefail
 
 HASH_FILE="INTEGRITY.sha256"
 
 if [ ! -f "$HASH_FILE" ]; then
-  echo "ERROR: $HASH_FILE not found. Run from the anonymous-artefact/ directory."
+  echo "ERROR: $HASH_FILE not found. Run from the artefact repository root."
   exit 1
 fi
 
